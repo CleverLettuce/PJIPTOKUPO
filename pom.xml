@@ -3,11 +3,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>hr.fer</groupId>
-	<artifactId>webshop2</artifactId>
+	<artifactId>webshop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>webshop2</name>
-	<description>webshop2</description>
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
@@ -52,4 +50,6 @@
   	</plugins>
   </build>
 
+	<name>FER Webshop</name>
+	<description>FER webshop</description>
 </project>
