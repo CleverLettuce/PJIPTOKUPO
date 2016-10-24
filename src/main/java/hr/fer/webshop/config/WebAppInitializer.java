@@ -1,4 +1,4 @@
-package hr.fer.webshop2.config; 
+package hr.fer.webshop.config; 
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
