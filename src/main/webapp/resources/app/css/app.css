@@ -9,7 +9,8 @@ body, header{
 }
 
 .colored-div {
-	border: 2px solid #d7eeec
+	border: 2px solid #d7eeec;
+	text-align: center;
 }
 
 a.navbar-title-link, a:hover.navbar-title-link {
@@ -18,4 +19,15 @@ a.navbar-title-link, a:hover.navbar-title-link {
 
 .carousel-inner > .item > img {
     margin: auto;
+}
+
+div.carousel-wrapper {
+	margin: auto;
+	width: 68%;
+	background-color: white;
+}
+
+.carousel-inner > .item > img {
+	width: 98%;
+	margin: auto;
 }
