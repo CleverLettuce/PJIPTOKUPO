@@ -1,84 +1,134 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 
 <title>FER Webshop</title>
 
-<link rel="stylesheet" type="text/css" href="resources\lib\bootstrap\css\bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="resources/app/css/app.css" />
+
+<link rel="stylesheet" type="text/css" href="resources/lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="resources/lib/bootstrap-material/css/bootstrap-material-design.min.css">
+<link rel="stylesheet" type="text/css" href="resources/lib/bootstrap-material/css/ripples.min.css">
+
+<link href="resources/lib/bootstrap-material/css/material-fonts.css" rel="stylesheet" type="text/css">
+<link href="resources/lib/bootstrap-material/css/material-icons.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
-
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-					aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Project name</a>
+	
+<header class="navbar navbar-fixed-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<h3 id="navbar-title" align="left">
+					<a class="navbar-title-link" href="/webshop">FER Webshop</a>
+				</h3>
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+			<div class="col-xs-8"> 
+				<h5 align="right">
+					<a class="navbar-title-link" href="signin">Log In | Sign Up </a>
+					<img src="resources/app/img/cart.png">
+				</h5> 
+			</div>
+		</div> 
+	</div> 
+</header> 
+
+<div id="main-container" class="container container-navbar-offset">
+	
+	<br>
+
+		<div id="carousel-example-generic" class="carousel slide"
+			data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0"
+					class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="resources/app/img/img01.jpg" alt="...">
+					<div class="carousel-caption">Dell laptop</div>
+				</div>
+				<div class="item">
+					<img src="resources/app/img/img02.jpg" alt="...">
+					<div class="carousel-caption">ASUS monitor</div>
+				</div>
+				<div class="item">
+					<img src="resources/app/img/img03.jpg" alt="...">
+					<div class="carousel-caption">MSI motherboard</div>
+				</div>
+			</div>
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic"
+				role="button" data-slide="prev"> <span
+				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a> <a class="right carousel-control" href="#carousel-example-generic"
+				role="button" data-slide="next"> <span
+				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+		<div class="row row-offset">
+		<p align="center"><strong>- Products -</strong></p>
+	</div>
+
+	<div class="row row-offset">
+		<div class="col-xs-4 col-sm-3 colored-div">
+			<ul class="list-unstyled product-list">
+				<li><a href="products">Computer Cases</a></li>
+				<li><a href="products">CPUs / Processors</a></li>
+				<li><a href="products">Fans, Heatsinks, Cooling</a></li>
+				<li><a href="products">GPUs/Video Graphic Cards</a></li>
+			</ul>
+		</div>
+
+		<div class="col-xs-4 col-sm-6 colored-div">
+			<ul class="list-unstyled product-list">
+				<li><a href="products">Motherboards</a></li>
+				<li><a href="products">Hard Drives, Storage</a></li>
+				<li><a href="products">Hard Drive Enclosures</a></li>
+				<li><a href="products">Interface / Add-On Cards</a></li>
+			</ul>
+		</div>
+
+		<div class="col-xs-4 col-sm-3 colored-div">
+			<ul class="list-unstyled product-list">
+				<li><a href="products">Memory (RAM)</a></li>
+				<li><a href="products">Optical Drives</a></li> 
+				<li><a href="products">Power Supplies</a></li>
+				<li><a href="products">Racks/Accessories</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<footer class="navbar navbar-fixed-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h4 align="center">FER, 2017</h4>
 			</div>
 		</div>
-	</nav>
-
-	<div class="container">
-	<br><br>
-		<h1>FER Webshop init</h1>
-		<p class="lead">Cupcake ipsum dolor sit. Amet sesame snaps marshmallow candy pie oat cake chocolate cake. Cookie carrot cake gummi bears donut lollipop gingerbread. Brownie powder sweet roll lollipop wafer liquorice jelly chocolate cotton candy. Icing liquorice gummies icing cupcake. Pudding carrot cake jelly beans sugar plum. Gummi bears bonbon fruitcake croissant dessert. Cake liquorice cheesecake. Danish gummies wafer. Sweet bear claw gummies gummi bears bear claw candy canes croissant sweet roll jujubes. Gummies dragée cheesecake topping sweet roll oat cake candy. Lollipop tiramisu jelly-o macaroon dragée cookie cake. Dessert chocolate gummi bears. Candy topping pie topping pie bear claw chocolate.
-Candy canes soufflé lollipop sweet roll. Tart lollipop cookie lemon drops dessert lemon drops lollipop. Jelly beans marzipan jelly candy candy canes lollipop cupcake jelly beans pudding. Gummi bears gummies carrot cake icing. Halvah pie brownie sweet tart croissant chocolate bar sweet toffee. Ice cream carrot cake icing. Chocolate bear claw toffee chupa chups. Liquorice jelly beans muffin oat cake cake marzipan. Ice cream cake bonbon candy canes. Tiramisu cake dessert fruitcake macaroon gummi bears marshmallow gummi bears gummi bears. Cake tootsie roll marshmallow carrot cake chocolate bar cake croissant. Candy sugar plum sweet roll sesame snaps. Cupcake candy biscuit jujubes sweet fruitcake lollipop. Pie bear claw gingerbread bear claw oat cake.
-Ice cream toffee lemon drops ice cream jujubes tootsie roll candy canes cake cake. Pastry tart powder jujubes jelly-o. Cheesecake tart cake cake. Gingerbread pastry cookie lemon drops tart danish biscuit. Cheesecake topping biscuit danish gummies chocolate. Pastry marshmallow bear claw sugar plum gummies ice cream tart. Marshmallow jujubes cake chocolate bar jelly beans dragée dragée. Sugar plum cheesecake sugar plum chocolate cake sweet sugar plum caramels. Marshmallow gummi bears candy canes. Oat cake pie cotton candy carrot cake lollipop dragée. Tart topping powder donut croissant icing. Croissant tootsie roll sesame snaps pie chupa chups bear claw. Sweet roll pastry gingerbread soufflé wafer powder topping topping.
-Gummies cookie bonbon donut halvah cupcake chocolate bar bear claw muffin. Marzipan croissant gummi bears. Candy pastry gummi bears halvah chocolate bar. Bonbon bonbon icing toffee macaroon. Chocolate cake donut dessert jujubes. Cupcake apple pie soufflé fruitcake brownie gummies donut. Halvah cheesecake cake halvah pastry candy jelly cake chocolate bar. Sugar plum sesame snaps candy candy. Lollipop jelly beans macaroon cheesecake lemon drops carrot cake pudding oat cake dessert. Icing biscuit jelly-o sweet gummies tootsie roll candy. Croissant donut cake pie sesame snaps sesame snaps chocolate toffee. Apple pie candy canes jujubes sweet roll macaroon.
-Pie macaroon chocolate lemon drops toffee tiramisu powder. Cake marshmallow dragée carrot cake pudding gingerbread chocolate cake. Gingerbread pudding jujubes. Tootsie roll pastry pie bonbon macaroon dessert tiramisu chocolate. Dragée marshmallow marzipan. Fruitcake marzipan donut sweet dragée lemon drops lollipop danish. Sweet sweet roll biscuit biscuit muffin sweet cookie cookie. Cake apple pie sugar plum. Cotton candy gummies cotton candy ice cream cotton candy bear claw chocolate bar. Gummi bears macaroon cake gummi bears marzipan liquorice candy canes gingerbread. Donut pudding candy brownie carrot cake. Tart jelly-o oat cake sweet. Cupcake soufflé lollipop soufflé muffin</p>
-
-		<h1>Buttons</h1>
-		<hr>
-		<p>
-			<button type="button" class="btn btn-lg btn-default">Default</button>
-			<button type="button" class="btn btn-lg btn-primary">Primary</button>
-			<button type="button" class="btn btn-lg btn-success">Success</button>
-			<button type="button" class="btn btn-lg btn-info">Info</button>
-			<button type="button" class="btn btn-lg btn-warning">Warning</button>
-			<button type="button" class="btn btn-lg btn-danger">Danger</button>
-			<button type="button" class="btn btn-lg btn-link">Link</button>
-		</p>
-		<p>
-			<button type="button" class="btn btn-default">Default</button>
-			<button type="button" class="btn btn-primary">Primary</button>
-			<button type="button" class="btn btn-success">Success</button>
-			<button type="button" class="btn btn-info">Info</button>
-			<button type="button" class="btn btn-warning">Warning</button>
-			<button type="button" class="btn btn-danger">Danger</button>
-			<button type="button" class="btn btn-link">Link</button>
-		</p>
-		<p>
-			<button type="button" class="btn btn-sm btn-default">Default</button>
-			<button type="button" class="btn btn-sm btn-primary">Primary</button>
-			<button type="button" class="btn btn-sm btn-success">Success</button>
-			<button type="button" class="btn btn-sm btn-info">Info</button>
-			<button type="button" class="btn btn-sm btn-warning">Warning</button>
-			<button type="button" class="btn btn-sm btn-danger">Danger</button>
-			<button type="button" class="btn btn-sm btn-link">Link</button>
-		</p>
-		<p>
-			<button type="button" class="btn btn-xs btn-default">Default</button>
-			<button type="button" class="btn btn-xs btn-primary">Primary</button>
-			<button type="button" class="btn btn-xs btn-success">Success</button>
-			<button type="button" class="btn btn-xs btn-info">Info</button>
-			<button type="button" class="btn btn-xs btn-warning">Warning</button>
-			<button type="button" class="btn btn-xs btn-danger">Danger</button>
-			<button type="button" class="btn btn-xs btn-link">Link</button>
-		</p>
-		<hr>
 	</div>
+</footer>
+
+<script src="resources/lib/bootstrap/js/jquery.min.js"></script>
+<script src="resources/lib/bootstrap/js/bootstrap.min.js"></script>
+<!-- <script src="resources/lib/bootstrap/js/carousel.js"></script> -->
+
+<!-- <script src="resources/app/js/app.js"></script> -->
+		
 </body>
 </html>

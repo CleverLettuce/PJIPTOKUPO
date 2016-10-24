@@ -1,0 +1,21 @@
+body, header{
+	min-width: 400px;
+	width: auto;
+}
+
+/* Container */
+.container-navbar-offset {
+	margin-top: 70px;
+}
+
+.colored-div {
+	border: 2px solid #d7eeec
+}
+
+a.navbar-title-link, a:hover.navbar-title-link {
+	color: #d7eeec
+}
+
+.carousel-inner > .item > img {
+    margin: auto;
+}
