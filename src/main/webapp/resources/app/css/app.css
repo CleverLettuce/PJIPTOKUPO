@@ -9,7 +9,7 @@ body, header{
 }
 
 .colored-div {
-	border: 2px solid #d7eeec;
+	/* border: 2px solid #d7eeec; */
 	text-align: center;
 }
 
