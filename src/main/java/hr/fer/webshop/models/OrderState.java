@@ -15,8 +15,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="[user]")
-public class User implements Serializable {
+@Table(name="[order]")
+public class OrderState implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -25,36 +25,32 @@ public class User implements Serializable {
 	@Column(name="[id]")
 	private Long id;
 	
-	@Column(name="[first_name]")
-	private String firstName;
+	@Column(name="[description]")
+	private String description;
 	
-	@Column(name="[last_name]")
-	private String lastName;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user", cascade={CascadeType.ALL})
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "orderState", cascade={CascadeType.ALL})
 	private List<Order> orders = new ArrayList<>();
-	
+
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getFirstName() {
-		return firstName;
+
+	public String getDescription() {
+		return description;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+
 	public List<Order> getOrders() {
 		return orders;
 	}
+
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
 	}

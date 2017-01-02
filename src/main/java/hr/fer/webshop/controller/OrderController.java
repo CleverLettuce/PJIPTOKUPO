@@ -3,10 +3,10 @@ package hr.fer.webshop.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import hr.fer.webshop.models.User;
+import hr.fer.webshop.models.Order;
 
 @RestController
-@RequestMapping("/users")
-public class UserControllers extends JpaRestController<User> {
+@RequestMapping("/orders")
+public class OrderController extends JpaRestController<Order> {
 
 }
