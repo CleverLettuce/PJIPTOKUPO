@@ -13,9 +13,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="[product]")
@@ -41,11 +44,11 @@ public class Product implements Serializable {
 	private Long quantity;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="product_type_id")
     private ProductType productType;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "product", cascade={CascadeType.ALL})
-	private List<OrderProducts> orderProducts = new ArrayList<>();
+	@JsonIgnore
+	@ManyToMany(fetch = FetchType.LAZY, cascade={CascadeType.ALL})
+	private List<Order> orders = new ArrayList<>();
 
 	public Long getId() {
 		return id;
@@ -95,12 +98,12 @@ public class Product implements Serializable {
 		this.productType = productType;
 	}
 
-	public List<OrderProducts> getOrderProducts() {
-		return orderProducts;
+	public List<Order> getOrders() {
+		return orders;
 	}
 
-	public void setOrderProducts(List<OrderProducts> orderProducts) {
-		this.orderProducts = orderProducts;
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
 	}
 
 }

@@ -1,0 +1,36 @@
+<div class="container container-navbar-offset">
+
+		<div class="row">
+			<div class="col-xs-4 col-sm-3">
+
+				<app-sidenav></app-sidenav>
+
+			</div>
+			<div class="col-xs-8 col-sm-9">
+				<div class="row content margin-right-5">
+					<div class="hidden-xs col-sm-7 col-md-6 col-lg-5 padding-10">
+						<img src="app/img/pic300250.png" alt="Product" />
+					</div>
+					<div class="col-xs-12 col-sm-5 col-md-6 col-lg-7">
+						<h1>{{ product.name }}</h1>
+						<p>{{ product.description }}</p>
+						<br> 
+						<br>
+						<div>
+							<p>
+								<strong>Price: <span>{{ product.price }}</span></strong> 
+							</p>
+							<p>
+								<strong>Status: <span class="text-success">{{ isAvailable(product) }}</span></strong>  
+							</p>
+						</div> 
+						<br>
+						<div>
+							<a class="btn btn-success" [routerLink]="['/cart', product.id]">Add to cart</a>
+						</div>
+					</div>
+				</div>
+				<br> <br>
+			</div>
+		</div>
+	</div>

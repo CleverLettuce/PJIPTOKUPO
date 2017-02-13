@@ -14,3 +14,10 @@
 *.ear
 *.classh
 
+# node ignore
+node_modules/
+npm-debug.log
+
+/bin/
+*/node_modules/*
+*/lib/*

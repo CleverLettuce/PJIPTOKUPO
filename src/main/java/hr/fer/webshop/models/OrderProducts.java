@@ -24,11 +24,9 @@ public class OrderProducts implements Serializable {
 	private Long id;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="order_id")
     private Order order;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="product_id")
     private Product product;
 
 	public Long getId() {

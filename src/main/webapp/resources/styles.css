@@ -1,0 +1,59 @@
+/* Application styles */
+
+/* Override styles */
+
+body, header {
+   min-width: 400px;  
+   width: auto; 
+}
+
+/* Custom styles */
+
+/* Layout */
+div.padding-10 { 
+	padding: 10px;
+}
+div.margin-right-5 {
+	margin-right: 5px;
+}
+
+/* Container */
+.container-navbar-offset {
+	margin-top: 70px;
+}
+
+/* BS Carousel */
+div.carousel-wrapper {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+}
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img {
+	width: 90%;
+	margin: auto;
+}
+
+/* Navbar */
+a.navbar-title-link, a:hover.navbar-title-link, a.navbar-title-link.active {
+	color: #d7eeec;
+} 
+
+/* Product lists */
+.product-list {
+	margin-left: 20px;
+}
+
+/* Login thumbnail */
+div.login-thumbnail {
+	padding-left: 10px;
+	padding-right: 10px; 
+	padding-top: 5px;
+}
+#signup-thumbnail-hr {
+	margin-top:	92px;   
+}
+a.btn-signup-thumbnail {
+	margin-top:	15px;  
+} 
+

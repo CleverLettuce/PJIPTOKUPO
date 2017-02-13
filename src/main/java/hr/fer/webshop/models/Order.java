@@ -12,9 +12,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="[order]")
@@ -34,15 +37,13 @@ public class Order implements Serializable {
 	private Date date;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="user_id")
     private User user;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="order_state_id")
     private OrderState orderState;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "order", cascade={CascadeType.ALL})
-    private List<OrderProducts> orderProducts;
+	@ManyToMany(fetch = FetchType.EAGER, cascade={CascadeType.ALL})
+    private List<Product> products;
 	
 	public Long getId() {
 		return id;
@@ -75,13 +76,15 @@ public class Order implements Serializable {
 	public void setUser(User user) {
 		this.user = user;
 	}
+	
+	
 
-	public List<OrderProducts> getOrderProducts() {
-		return orderProducts;
+	public List<Product> getProducts() {
+		return products;
 	}
 
-	public void setOrderProducts(List<OrderProducts> orderProducts) {
-		this.orderProducts = orderProducts;
+	public void setProducts(List<Product> products) {
+		this.products = products;
 	}
 
 	public OrderState getOrderState() {

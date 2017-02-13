@@ -1,0 +1,100 @@
+	<div class="container container-navbar-offset">
+
+		<div class="row">
+			<div class="col-xs-4 col-sm-3">
+
+				<app-sidenav></app-sidenav>
+
+			</div>
+
+			<div class="col-xs-8 col-sm-9">
+				<div class="row content">
+					<h1 class="bold text-primary">Personal information</h1>
+				<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+
+					<div class="row">
+
+						<div class="col-xs-6">
+							<p class="form-text">Username*:</p>
+							<input type="text" name="username" class="form-control" tabindex ="1" [(ngModel)]="user.username" 
+								#username="ngModel" required> 
+							<small
+								[hidden]="username.valid || (username.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">Last name*:</p>
+							<input type="text" name="lastName" class="form-control" tabindex ="3" [(ngModel)]="user.lastName" 
+								#lastName="ngModel" required>
+							<small
+								[hidden]="lastName.valid || (lastName.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">Address*:</p>
+							<input type="text" name="address" class="form-control" tabindex ="5" [(ngModel)]="user.address" 
+								#address="ngModel" required>
+							<small
+								[hidden]="address.valid || (address.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">City*:</p>
+							<input type="text" name="city" class="form-control" tabindex ="7" [(ngModel)]="user.city" 
+								#city="ngModel" required>
+							<small
+								[hidden]="city.valid || (city.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">Email address*:</p>
+							<input type="text" name="email" class="form-control" tabindex ="9" [(ngModel)]="user.email" 
+								#email="ngModel" required>
+							<small
+								[hidden]="email.valid || (email.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							 <br>
+						</div>
+
+						<div class="col-xs-6">
+							<p class="form-text">Password*:</p>
+							<input type="password" name="password" class="form-control" tabindex ="2" [(ngModel)]="user.password" 
+								#password="ngModel" required>
+							<small
+								[hidden]="password.valid || (password.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">First name*:</p>
+							<input type="text" name="firstName" class="form-control" tabindex ="4" [(ngModel)]="user.firstName" 
+								#firstName="ngModel" required>
+							<small
+								[hidden]="firstName.valid || (firstName.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">Zip*:</p>
+							<input type="text" name="zip" class="form-control" tabindex ="6" [(ngModel)]="user.zip" 
+								#zip="ngModel" required>
+							<small
+								[hidden]="zip.valid || (zip.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">Country*:</p>
+							<input type="text" name="country" class="form-control" tabindex ="8" [(ngModel)]="user.country" 
+								#country="ngModel" required>
+							<small
+								[hidden]="country.valid || (country.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<p class="form-text">Telephone&nbsp;number*:</p>
+							<input type="text" name="telNumber" class="form-control" tabindex ="10" [(ngModel)]="user.telNumber" 
+								#telNumber="ngModel" required>
+							<small
+								[hidden]="telNumber.valid || (telNumber.pristine && !userForm.submitted)"
+								class="text-danger"> This field is required. 
+							</small>
+							<button type="submit" class="btn btn-success btn-small" tabindex ="11">Confirm</button>
+							<button type="reset" class="btn btn-danger btn-small" tabindex ="12">Clear</button>
+							<a class="btn btn-danger" routerLink="/product" tabindex ="13">Continue</a>
+						</div>
+						</div>
+				</form>
+
+		</div>
+	</div>
